@@ -1,0 +1,16 @@
+
+from flask import Flask
+
+app = Flask(__foodapp__)
+
+from app import views
+from flask import url_for
+
+def get_orders(get,orders):
+    new_order = {}
+    for orderid in order:
+        if order == 'id':
+            new_order['uri'] = url_for('get_order', order_id=order['id'], _external=True)
+        else:
+            new_order['id'] = order[field]
+    return new_order
