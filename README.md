@@ -27,8 +27,8 @@ export FLASK_APP = run.py
 export MODE = development
 flask run 
 
-###Endpoints Postman Testing
-open postman and enter all the required sections i.e name,price and descripition as show below
+###API endpoints to  tested
+
 
 GET/orders _ Get all orders
 GET/orders/<orderId> _ get  specific order
