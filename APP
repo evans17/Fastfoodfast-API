@@ -12,5 +12,5 @@ def get_orders(get,orders):
         if order == 'id':
             new_order['uri'] = url_for('get_order', order_id=order['id'], _external=True)
         else:
-            new_order['id'] = order[field]
+            new_order['id'] = order[update]
     return new_order
