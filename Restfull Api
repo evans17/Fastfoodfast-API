@@ -1,0 +1,7 @@
+POST/api/v1/orders - post orders
+GET/api/v1/orders _ get all orders
+GET/api/v1/orders/orderId _ get specific order
+PUT/api/V1/orders/orderId _ update a status of order
+
+
+
