@@ -1,16 +1,14 @@
-
 from flask import Flask
+from flask_restful import Api
+from config import app_config
+from .orders import SpecificOrder, NewOrders, GetOrders
 
-app = Flask(__foodapp__)
+def create_app(config_stage):
+    app = Flask(__name__)
+    app.config.from_object(app_config[config_stage])
 
-from app import views
-from flask import url_for
+    api = Api(app)
 
-def get_orders(get,orders):
-    new_order = {}
-    for orderid in order:
-        if order == 'id':
-            new_order['uri'] = url_for('get_order', order_id=order['id'], _external=True)
-        else:
-            new_order['id'] = order[update]
-    return new_order
+    api.add_resource(SpecificOrder, '/api/v1/orders/<orderId>')
+    api.add_resource(NewOrders, '/api/v1/orders')
+    api.add_resource(GetOrders, '/api/v1/orders')
